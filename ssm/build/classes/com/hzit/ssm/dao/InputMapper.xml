@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.hzit.ssm.dao.InputMapper">
+
+	<!-- 查询所有 -->
+	<select id="selectAll" resultType="input">
+		select * from t_input
+	</select>
+	
+	<insert id="insert" parameterType="input">
+		insert into t_input values(null,#{name},#{pcount},#{dprice},#{price},#{annt},#{pname},current_timestamp())
+	</insert>
+	
+	<select id="selectByName" resultType="input" parameterType="String">
+        select * from t_input
+    </select> 
+</mapper>

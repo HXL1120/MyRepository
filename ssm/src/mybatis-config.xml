@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration> 
+
+	<!-- 给类定义一个简短别名 -->
+   <typeAliases>
+   		<typeAlias type="com.hzit.ssm.pojo.Admin" alias="admin"/>
+   		<typeAlias type="com.hzit.ssm.pojo.Products" alias="products"/>
+   		<typeAlias type="com.hzit.ssm.pojo.Provider" alias="provider"/>
+   		<typeAlias type="com.hzit.ssm.pojo.Input" alias="input"/>
+   		
+   	</typeAliases>
+
+    
+    <!--2.配置Mapper的位置 -->
+    <mappers>
+		<mapper resource="com/hzit/ssm/dao/AdminMapper.xml" />
+		<mapper resource="com/hzit/ssm/dao/BigTypeMapper.xml" />
+		<mapper resource="com/hzit/ssm/dao/InputMapper.xml" />
+		<mapper resource="com/hzit/ssm/dao/OutputMapper.xml" />
+		<mapper resource="com/hzit/ssm/dao/ProductsMapper.xml" />
+		<mapper resource="com/hzit/ssm/dao/ProviderMapper.xml" />
+		<mapper resource="com/hzit/ssm/dao/SmallTypeMapper.xml" />
+    </mappers>
+    
+</configuration>
